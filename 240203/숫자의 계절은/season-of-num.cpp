@@ -6,7 +6,7 @@ int main() {
     int m;
     cin >> m;
 
-    if ( m >=12 && m <=2) {
+    if ( m >=12 || m <=2) {
         cout << "Winter";
     } else if (  m <=5 ) {
         cout << "Spring";
