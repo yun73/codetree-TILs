@@ -6,7 +6,7 @@ int main() {
     int a;
     cin >> a;
 
-    if ( a%13 == 0 || a%19 == 0 ) {
+    if ( ~(a%13) || ~(a%19) ) {
         cout << "True";
     } else {
         cout << "False";
