@@ -26,7 +26,7 @@ int main() {
         }
 
         if ( cnt > 0) {
-            cout << cnt << " ";
+            cout << 0 << " ";
         } else {
             cout << i << " ";
         }
