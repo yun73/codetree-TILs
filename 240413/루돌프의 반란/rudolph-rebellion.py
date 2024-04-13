@@ -187,7 +187,7 @@ for _ in range(P):
     santa[i] = [sr-1,sc-1]
 
 for k in range(M):
-    if lose == [True] * (P+1): # 만약 다 탈락했으면 즉시 게임 종료
+    if lose == [False] + [True] * (P): # 만약 다 탈락했으면 즉시 게임 종료
         break
     # 루돌프 움직이기
     rudolf_move(k)
