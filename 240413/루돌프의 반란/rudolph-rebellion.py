@@ -103,6 +103,8 @@ def santa_push(p,dis,dx,dy):
     for i in range(1,P+1):
         if i == p:
             continue
+        if lose[i]:
+            continue
         if santa[i] == [nx,ny]:
             santa_push(i,1,dx,dy)
             break
@@ -150,7 +152,15 @@ def santa_move(p,k):
         nx,ny= x+dx, y + dy
         if not(0<=nx<N and 0<=ny<N):
             continue
-        if [nx,ny] in santa.values():
+        check = False
+        for i in range(1,P+1):
+            if lose[i]:
+                continue
+            if [nx,ny] == santa[i]:
+                check = True
+                break
+
+        if check:
             continue
         # 가까워지는 방향 찾기
         next_dis = (nx - rudolf[0]) ** 2 + (ny - rudolf[1]) ** 2
